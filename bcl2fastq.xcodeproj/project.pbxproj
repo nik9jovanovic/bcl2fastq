@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		246AA24A20F6254F002E9FBA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 246AA24920F6254F002E9FBA /* main.cpp */; };
+		24838CDE2126E86300819B88 /* SampleSheetEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24838CDC2126E86300819B88 /* SampleSheetEntry.cpp */; };
+		24838CE0212986D000819B88 /* CBCLReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 24838CDF212986D000819B88 /* CBCLReader.cpp */; };
+		249F75DC21199D0000116879 /* BCLConverter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 249F75DB21199D0000116879 /* BCLConverter.cpp */; };
+		249F75DF211DAC3A00116879 /* Semaphore.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 249F75DD211DAC3A00116879 /* Semaphore.cpp */; };
+		249F75ED2124B86400116879 /* ReadStructure.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 249F75EB2124B86400116879 /* ReadStructure.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		246AA24620F6254F002E9FBA /* bcl2fastq */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = bcl2fastq; sourceTree = BUILT_PRODUCTS_DIR; };
 		246AA24920F6254F002E9FBA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		246AA25020F62629002E9FBA /* BCLConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCLConverter.h; sourceTree = "<group>"; };
+		24838CDC2126E86300819B88 /* SampleSheetEntry.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SampleSheetEntry.cpp; sourceTree = "<group>"; };
+		24838CDD2126E86300819B88 /* SampleSheetEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SampleSheetEntry.h; sourceTree = "<group>"; };
+		24838CDF212986D000819B88 /* CBCLReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CBCLReader.cpp; sourceTree = "<group>"; };
+		249F75D92114818C00116879 /* CBCLReader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBCLReader.h; sourceTree = "<group>"; };
+		249F75DB21199D0000116879 /* BCLConverter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BCLConverter.cpp; path = /Users/nik/Documents/Projects/bcl2fastq/bcl2fastq/BCLConverter.cpp; sourceTree = "<absolute>"; };
+		249F75DD211DAC3A00116879 /* Semaphore.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Semaphore.cpp; sourceTree = "<group>"; };
+		249F75DE211DAC3A00116879 /* Semaphore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Semaphore.h; sourceTree = "<group>"; };
+		249F75EB2124B86400116879 /* ReadStructure.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ReadStructure.cpp; sourceTree = "<group>"; };
+		249F75EC2124B86400116879 /* ReadStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReadStructure.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				246AA24920F6254F002E9FBA /* main.cpp */,
+				246AA25020F62629002E9FBA /* BCLConverter.h */,
+				249F75DB21199D0000116879 /* BCLConverter.cpp */,
+				249F75EC2124B86400116879 /* ReadStructure.h */,
+				249F75EB2124B86400116879 /* ReadStructure.cpp */,
+				249F75D92114818C00116879 /* CBCLReader.h */,
+				24838CDF212986D000819B88 /* CBCLReader.cpp */,
+				24838CDD2126E86300819B88 /* SampleSheetEntry.h */,
+				24838CDC2126E86300819B88 /* SampleSheetEntry.cpp */,
+				249F75DE211DAC3A00116879 /* Semaphore.h */,
+				249F75DD211DAC3A00116879 /* Semaphore.cpp */,
 			);
 			path = bcl2fastq;
 			sourceTree = "<group>";
@@ -118,6 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24838CE0212986D000819B88 /* CBCLReader.cpp in Sources */,
+				24838CDE2126E86300819B88 /* SampleSheetEntry.cpp in Sources */,
+				249F75DF211DAC3A00116879 /* Semaphore.cpp in Sources */,
+				249F75ED2124B86400116879 /* ReadStructure.cpp in Sources */,
+				249F75DC21199D0000116879 /* BCLConverter.cpp in Sources */,
 				246AA24A20F6254F002E9FBA /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +267,11 @@
 		246AA24E20F6254F002E9FBA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -245,7 +279,11 @@
 		246AA24F20F6254F002E9FBA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "";
+				"OTHER_LDFLAGS[arch=*]" = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
